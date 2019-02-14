@@ -1,0 +1,10 @@
+# Compiled code
+build/
+
+# Dependency
+node_modules/
+
+# Other
+.DS_Store
+*/.DS_Store
+.vscode/
