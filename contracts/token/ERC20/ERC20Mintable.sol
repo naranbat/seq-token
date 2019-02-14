@@ -1,13 +1,13 @@
 pragma solidity ^0.5.2;
 
-import "./ERC20.sol";
+import "./SEQ.sol";
 import "../../access/roles/MinterRole.sol";
 
 /**
  * @title ERC20Mintable
  * @dev ERC20 minting logic
  */
-contract ERC20Mintable is ERC20, MinterRole {
+contract ERC20Mintable is SEQ, MinterRole {
     /**
      * @dev Function to mint tokens
      * @param to The address that will receive the minted tokens.

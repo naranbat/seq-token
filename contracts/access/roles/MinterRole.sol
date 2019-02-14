@@ -1,8 +1,9 @@
 pragma solidity ^0.5.2;
 
 import "../Roles.sol";
+import "../../ownership/Ownable.sol";
 
-contract MinterRole {
+contract MinterRole is Ownable {
     using Roles for Roles.Role;
 
     event MinterAdded(address indexed account);
@@ -23,7 +24,7 @@ contract MinterRole {
         return _minters.has(account);
     }
 
-    function addMinter(address account) public onlyMinter {
+    function addMinter(address account) public onlyOwner {
         _addMinter(account);
     }
 
